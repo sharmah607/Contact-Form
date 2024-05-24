@@ -1,0 +1,84 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    outline: none; 
+    font-family: "Karla", sans-serif;
+} 
+
+body{
+    background-color: hsl(148, 38%, 91%);
+}
+
+.main-form{
+    background-color: hsl(0, 0%, 100%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 550px;
+    width: 100%;
+    padding: 25px;
+    border-radius: 15px; 
+}
+
+.main-form h2{
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.input_field{
+    margin-bottom: 10px;
+}
+
+.main-form .input_field input[type="text"], input[type="email"],
+.main-form textarea {
+    border: 1px solid #e0e0e0;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#query{
+    display: block;
+    padding-bottom: 5px;
+}
+
+.main-form #message{
+    height: 100px;
+}
+
+.main-form textarea {
+    resize: none;
+    padding: 80px;
+}
+
+.main-form .btn input[type="submit"] {
+    border: 0px;
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    background-color: hsl(169, 82%, 27%);
+    color: hsl(0, 0%, 100%);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+footer{
+    font-size: 11px; text-align: center; 
+    color: hsl(228, 45%, 44%);
+    position: fixed;
+    inset: auto 0 0 0;
+    padding: 10px;
+}
+
+/* label, input{
+    display: block;
+} */

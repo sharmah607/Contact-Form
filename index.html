@@ -4,48 +4,76 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Contact form</title>
+  <!--CSS-->
+  <link rel="stylesheet" href="./styles.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <!--Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  
+  <title>Contact form</title>
+
 </head>
 <body>
+  <!--Title-->
+  <div class="main-form">
+    <!-- Heading -->
+    <h2>Contact Us</h2>
+       <!--Form-->
+    <form action="">
 
-  Contact Us
+      <!--Name-->
+      <div class="input_field">
+        <label for="fName">First Name<span class="asterisk"> *</span></label>
+        <input type="text" placeholder="First Name">
 
-  First Name
-  This field is required
+        <label for="">Last Name<span class="asterisk"> *</span></label>
+        <input type="text" placeholder="Last Name">
+      </div>
+      
+      <!--Email-->
+      <div class="input_field">
+        <label for="">Email Address<span class="asterisk"> *</span></label>
+        <input type="email" placeholder="Email Address">
+      </div>
 
-  Last Name
-  This field is required
+      <!--Query-->
+      <div class="input_field">
+        <label for="queryType" id="query">Query Type<span class="asterisk"> *</span></label>
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+        <input type="radio" id="generalEnquiry">
+        <label for="generalEnquiry">General Enquiry</label>
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
+        <input type="radio" id="supportRequest">
+        <label for="supportRequest">Support Request</label>
+      </div>
+      
+      <!--Message-->
+      <div class="input_field">
+        <label for="message">Message<span class="asterisk"> *</span></label>
+        <input type="text" id="message" placeholder="Write your Message here">
+      </div>
+      
+      <!--Consent-->
+      <div class="input_field">
+        <input type="checkbox" name="" id="consent">
+        <label for="consent">I consent to being contacted by the team<span class="asterisk"> *</span></label>
+      </div>
+      
+      <!--Submit-->
+      <div class="btn">
+        <input type="submit">
+      </div>
 
-  Message
-  This field is required
+    </form>
+    </div>
 
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
-  <div class="attribution">
-    Coded by <a href="#">Your Name Here</a>.
   </div>
+  
+  <footer>
+    <p>Coded by Himanshu Sharma.</p>
+  </footer>
+
 </body>
 </html>

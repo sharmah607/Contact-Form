@@ -1,0 +1,98 @@
+  First Name
+  This field is required
+
+  Last Name
+  This field is required
+
+  Email Address
+  Please enter a valid email address
+  This field is required
+
+  Query Type
+  General Enquiry
+  Support Request
+  Please select a query type
+
+  Message
+  This field is required
+
+  I consent to being contacted by the team
+  To submit this form, please consent to being contacted
+
+  Submit
+
+  Message Sent!
+  Thanks for completing the form. We'll be in touch soon!
+
+
+  <div class="col-md-7 col-lg-8">
+    <h4 class="mb-3">Contact Us</h4>
+    <form class="needs-validation" novalidate="">
+      <div class="row g-3">
+
+        <!--Name-->
+        <div class="col-sm-4">
+          <label for="firstName" class="form-label">First name</label>
+          <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+          <div class="invalid-feedback">
+            Valid first name is required.
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <label for="lastName" class="form-label">Last name</label>
+          <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+          <div class="invalid-feedback">
+            Valid last name is required.
+          </div>
+        </div>
+
+        <!--Email-->
+        <div class="col-8">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="email" placeholder="you@example.com">
+          <div class="invalid-feedback">
+            Please enter a valid email address for shipping updates.
+          </div>
+        </div>
+
+      <!-- <p class="mb-3">Query Type</p> -->
+      
+        <!--Query Type-->
+      <div class="my-3">
+        <label for="query">Query Type</label>
+        <div class="form-check">
+          <input id="general" name="queryType" type="radio" class="form-check-input" checked="" required="">
+          <label class="form-check-label" for="general">General Enquiry</label>
+        </div>
+        <div class="form-check">
+          <input id="support" name="queryType" type="radio" class="form-check-input" required="">
+          <label class="form-check-label" for="support">Support Request</label>
+        </div>
+      </div>
+
+      <!--Message-->
+      <!-- row gy-3 -->
+      <div class="message">
+        <div class="col-md-6">
+          <label for="message" class="form-label">Message</label>
+          <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+          <!-- <small class="text-body-secondary"></small> -->
+          <div class="invalid-feedback">
+            This field is required
+          </div>
+        </div>
+      </div>
+
+      <div class="">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            I consent to being contacted by the team
+          </label>
+        </div>
+      </div>
+
+      <button class="w-100 btn btn-primary btn-lg btn-success" type="submit">Submit</button>
+    </form>
+  </div>
