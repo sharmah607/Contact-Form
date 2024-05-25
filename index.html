@@ -21,49 +21,61 @@
     <!-- Heading -->
     <h2>Contact Us</h2>
        <!--Form-->
-    <form action="">
+    <form name="contactForm" onsubmit="return validate()" novalidate>
 
       <!--Name-->
-      <div class="input_field">
-        <label for="fName">First Name<span class="asterisk"> *</span></label>
-        <input type="text" placeholder="First Name">
-
-        <label for="">Last Name<span class="asterisk"> *</span></label>
-        <input type="text" placeholder="Last Name">
+      <div class="name">
+        <div class="fName">
+          <label for="fName">First Name<span> *</span></label>
+          <input type="text" placeholder="First Name" id="fName">
+          <span id="fName-error" class="errorMessage"></span>
+        </div>
+        
+        <div class="lName">
+          <label for="lName">Last Name<span> *</span></label>
+          <input type="text" placeholder="Last Name" id="lName">
+          <span id="lName-error" class="errorMessage"></span>
+        </div>
       </div>
       
       <!--Email-->
-      <div class="input_field">
-        <label for="">Email Address<span class="asterisk"> *</span></label>
-        <input type="email" placeholder="Email Address">
+      <div class="email">
+        <label for="email">Email Address<span> *</span></label>
+        <input type="email" placeholder="Email Address" id="email">
+        <span id="email-error" class="errorMessage"></span>
       </div>
 
       <!--Query-->
-      <div class="input_field">
-        <label for="queryType" id="query">Query Type<span class="asterisk"> *</span></label>
-
-        <input type="radio" id="generalEnquiry">
-        <label for="generalEnquiry">General Enquiry</label>
-
-        <input type="radio" id="supportRequest">
-        <label for="supportRequest">Support Request</label>
+      <div class="queryType" id="query-type">
+        <label id="query">Query Type<span> *</span></label>
+        <div class="general">
+          <input type="radio" id="generalEnquiry" name="query">
+          <label for="generalEnquiry">General Enquiry</label>
+        </div>
+        <div class="support">
+          <input type="radio" id="supportRequest" name="query">
+          <label for="supportRequest">Support Request</label>
+        </div>
+        <span id="query-error" class="errorMessage"></span>
       </div>
-      
       <!--Message-->
-      <div class="input_field">
-        <label for="message">Message<span class="asterisk"> *</span></label>
-        <input type="text" id="message" placeholder="Write your Message here">
+      <div class="messageField">
+        <label for="message">Message<span> *</span></label>
+        <input type="text" id="message">
+        <span id="message-error" class="errorMessage"></span>
       </div>
       
       <!--Consent-->
-      <div class="input_field">
+      <div class="consentField">
         <input type="checkbox" name="" id="consent">
-        <label for="consent">I consent to being contacted by the team<span class="asterisk"> *</span></label>
+        <label for="consent">I consent to being contacted by the team<span> *</span></label>
+        <span id="consent-error" class="errorMessage"></span>
       </div>
-      
       <!--Submit-->
       <div class="btn">
-        <input type="submit">
+        <input type="submit"
+                value="submit"
+                name="submit">
       </div>
 
     </form>
@@ -75,5 +87,6 @@
     <p>Coded by Himanshu Sharma.</p>
   </footer>
 
+  <script src="./index.js"></script>
 </body>
 </html>

@@ -10,6 +10,12 @@ body{
     background-color: hsl(148, 38%, 91%);
 }
 
+span {
+    color: hsl(169, 82%, 27%);
+}
+
+/* ---------- Main Form ---------- */
+
 .main-form{
     background-color: hsl(0, 0%, 100%);
     position: absolute;
@@ -27,38 +33,143 @@ body{
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 3px;
+    font-weight: 700;
 }
 
-.input_field{
+/* ---------- Name ---------- */
+
+.name{
+    overflow: hidden; /* Makes this div contain it's float */
     margin-bottom: 10px;
 }
 
-.main-form .input_field input[type="text"], input[type="email"],
-.main-form textarea {
+.name .fName,
+.name .lName {
+    width: 49%;
+    padding-top: 10px;
+}
+
+.name input,
+.name textarea{
     border: 1px solid #e0e0e0;
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     border-radius: 5px;
 }
 
+.name .fName {
+    float: left;
+}
+
+.name .lName {
+    float: right;
+}
+
+.name label {
+    display: block;
+    padding: 10px 0;
+    color: hsl(187, 24%, 22%);
+}
+
+/* ---------- Email ---------- */
+
+.email input,
+.email textarea {
+    border: 1px solid #e0e0e0;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.email{
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.email label {
+    display: block;
+    padding: 10px 0;
+    color: hsl(187, 24%, 22%);
+}
+
+/* ---------- Query ---------- */
+
 #query{
     display: block;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
 }
+
+.queryType {
+    overflow: hidden;
+    margin-bottom: 10px;
+    color: hsl(187, 24%, 22%);
+}
+
+.queryType .general,
+.queryType .support {
+    width: 49%;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.queryType .general {
+    float: left;
+}
+
+.queryType .support {
+    float: right;
+}
+
+#generalEnquiry {
+    margin: 0 10px;
+}
+
+#supportRequest {
+    margin: 0 10px;
+}
+
+/* ---------- Message ---------- */
 
 .main-form #message{
     height: 100px;
 }
 
-.main-form textarea {
-    resize: none;
-    padding: 80px;
+.messageField {
+    margin-bottom: 10px;
+    color: hsl(187, 24%, 22%);
 }
+
+.messageField label {
+    display: block;
+    padding-bottom: 10px;
+
+}
+
+.messageField input,
+.messageField textarea {
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* ---------- Consent ---------- */
+
+.consentField {
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    color: hsl(187, 24%, 22%);
+}
+
+/* ---------- Submit ---------- */
 
 .main-form .btn input[type="submit"] {
     border: 0px;
     margin-top: 15px;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
     width: 100%;
     background-color: hsl(169, 82%, 27%);
@@ -70,6 +181,7 @@ body{
     cursor: pointer;
 }
 
+/* ---------- Footer ---------- */
 
 footer{
     font-size: 11px; text-align: center; 
@@ -79,6 +191,10 @@ footer{
     padding: 10px;
 }
 
-/* label, input{
-    display: block;
-} */
+/* ---------- Error ---------- */
+
+.errorMessage {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
