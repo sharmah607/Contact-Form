@@ -2,7 +2,9 @@ function validate() {
     const fName = document.getElementById("fName").value;
     const lName = document.getElementById("lName").value;
     const email = document.getElementById("email").value;
-    const query = document.getElementsByName("query").checked;
+    const query = document.getElementsByName("query");
+
+
     const message = document.getElementById("message").value;
     const consent = document.getElementById("consent").checked;
 
@@ -20,6 +22,19 @@ function validate() {
     messageError.textContent = "";
     consentError.textContent = "";
 
+    function getSelectedRadioValue(values) {
+        let keepErrorValue = true;
+        for (var i = 0; i < values.length; i++) {
+            if (values[i].checked) {
+                keepErrorValue = false
+            }
+        }
+    if(keepErrorValue)
+    {
+        return true
+    }
+    }
+
     let isValid = true;
 
     if (fName === "" || undefined){
@@ -36,8 +51,7 @@ function validate() {
         emailError.textContent = "Please enter a valid email address";
         isValid = false;
     }
-
-    if ((query[0].checked == false ) && ( query[1].checked == false )){
+    if (getSelectedRadioValue(query)){
         queryError.textContent = "Please select a query type";
         isValid = false;
     }
@@ -50,6 +64,10 @@ function validate() {
     if (!consent) {
         consentError.textContent = "To submit this form, please consent to being contacted";
         isValid = false;
+    }
+
+    else {
+        alert("Thank you for your response!")
     }
 
     return isValid;
